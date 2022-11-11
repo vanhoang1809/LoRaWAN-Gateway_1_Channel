@@ -3,7 +3,7 @@
 #include <LoRa.h>
 
 
-#define ss 10  //GPIO 15
+#define ss 10 //GPIO 15
 #define rst 9  //GPIO 16
 #define dio0 2  //GPIO 4
 
@@ -35,10 +35,7 @@ int soilMoistureValue;
 
 void setup() {
   Serial.begin(115200);                   // initialize serial
-  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
   delay(500);
-  display.clearDisplay();
-  display.setTextColor(WHITE);
 
   while (!Serial);
 
@@ -64,14 +61,14 @@ void loop() {
     {
       Secs = 0;
     }
-    if ( (Secs >= 1) && (Secs <= 5) )
-    {
+//    if ( (Secs >= 1) && (Secs <= 5) )
+//    {
+//
+//      String message = "10";
+//      sendMessage(message, MasterNode, Node1);
+//    }
 
-      String message = "10";
-      sendMessage(message, MasterNode, Node1);
-    }
-
-    if ( (Secs >= 6 ) && (Secs <= 10))
+    if ( (Secs >= 1 ) && (Secs <= 10))
     {
 
       String message = "20";
@@ -129,15 +126,15 @@ void onReceive(int packetSize) {
     return;                             // skip rest of function
   }
 
-  // if message is for this device, or broadcast, print details:
-  //Serial.println("Received from: 0x" + String(sender, HEX));
-  //Serial.println("Sent to: 0x" + String(recipient, HEX));
-  //Serial.println("Message ID: " + String(incomingMsgId));
-  // Serial.println("Message length: " + String(incomingLength));
-  // Serial.println("Message: " + incoming);
-  //Serial.println("RSSI: " + String(LoRa.packetRssi()));
-  // Serial.println("Snr: " + String(LoRa.packetSnr()));
-  // Serial.println();
+//   if message is for this device, or broadcast, print details:
+  Serial.println("Received from: 0x" + String(sender, HEX));
+  Serial.println("Sent to: 0x" + String(recipient, HEX));
+  Serial.println("Message ID: " + String(incomingMsgId));
+   Serial.println("Message length: " + String(incomingLength));
+   Serial.println("Message: " + incoming);
+  Serial.println("RSSI: " + String(LoRa.packetRssi()));
+   Serial.println("Snr: " + String(LoRa.packetSnr()));
+   Serial.println();
 
   if ( sender == 0XCC )
   {
@@ -184,7 +181,7 @@ void onReceive(int packetSize) {
 
   }
 
-  display.display();
+//  display.display();
 }
 String getValue(String data, char separator, int index)
 {

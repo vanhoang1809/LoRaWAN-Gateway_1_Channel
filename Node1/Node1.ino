@@ -2,7 +2,7 @@
 #include <SPI.h> // include libraries
 #include <LoRa.h>
 
-#define ss 6
+#define ss 10
 #define rst 9
 #define dio0 2
 

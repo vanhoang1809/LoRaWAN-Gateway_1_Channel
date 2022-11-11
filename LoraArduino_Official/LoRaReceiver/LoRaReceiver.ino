@@ -12,13 +12,13 @@ int codingRateDenominator=5; // Numerator is 4, and denominator from 5 to 8, def
 int preambleLength=8; // from 2 to 20, default is 8
 String payload = "hello"; // you can change the payload
 
-#define SS 6
+#define SS 10
 #define RST 9
 #define DI0 2
 #define BAND 433E6  // Here you define the frequency carrier
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   while (!Serial);
 
   Serial.println("LoRa Receiver");

@@ -5,7 +5,7 @@
 #define DHTPIN 5          //pin where the dht22 is connected
 DHT dht(DHTPIN, DHT11);
 
-#define ss 11
+#define ss 10
 #define rst 9
 #define dio0 2
 
