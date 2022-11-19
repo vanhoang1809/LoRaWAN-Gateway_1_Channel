@@ -15,7 +15,7 @@ String payload = "hello"; // you can change the payload
 #define SS 10
 #define RST 9
 #define DI0 2
-#define BAND 433E6  // Here you define the frequency carrier
+#define BAND 856E6  // Here you define the frequency carrier
 
 void setup() {
   Serial.begin(115200);
@@ -52,16 +52,18 @@ void loop() {
   // send packet
   
   LoRa.beginPacket();
-  LoRa.print(payload);  
+// 
   
-  LoRa.endPacket();
+  
   counter++;
-
+  payload = payload + String(counter);
+  LoRa.print(payload);  
+  LoRa.endPacket();
   Serial.print("Sending packet with payload {");
   Serial.print(payload);
   Serial.print("} N°");
   Serial.println(counter);
- 
-
+  payload = "Hello";
+  
   delay(100);
 }
