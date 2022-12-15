@@ -15,7 +15,7 @@ String payload = "hello";      // you can change the payload
 #define SS 10
 #define RST 9
 #define DI0 2
-#define BAND 856E6 // Here you define the frequency carrier
+#define BAND 433E6 // Here you define the frequency carrier
 
 void setup()
 {
