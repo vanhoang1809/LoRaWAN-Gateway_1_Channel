@@ -28,7 +28,6 @@
 
 ###
 ## Contact 
-<!-- 1. Link Video Demo: **[Please click Here](https://drive.google.com/file/d/12MhrGpOf4OUbh2oLuE-f_nshHSeFesLh/view?usp=sharing)** -->
 1. If you have any questions or Bugs detection about my source code, please contact: 
 > * Phone: 0352571646
 > * Email: vvhoang18092001@gmail.com
