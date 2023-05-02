@@ -2,6 +2,7 @@
 ## About Project
 1. This is the source code of the 1-channel LoRaWAN Gateway system using Raspberry 4B, Chirpstack Network Server, and Thingsboard Application.
 2. We experimented to survey the performance evaluation parameters of the system such as (Received Signal Strength Indication) RSSI and (Signal to Noise Ratio) SNR in the area of Vietnam - Korean University of Information and Communication Technology.
+3. Link Video demo: **[Please click Here](https://drive.google.com/file/d/13DmJdgovQm251dSIvLBjtRWGCRVF_KX4/view?usp=sharing)**
 ## Overview of survey results and evaluation of system 
 1. Experimental results show that, at a distance of 50 meters, the value of SNR = 6.59 dB and RSSI = -15.9 dBm, the system can transmit and receive signals between Gateway and End-node at a high level and with little interference.
 2. Survey results are averaged after 90 surveys at distances from 50 meters to 400 meters. The results shown in the graph visualize the influence of distance on SNR and RSSI.
